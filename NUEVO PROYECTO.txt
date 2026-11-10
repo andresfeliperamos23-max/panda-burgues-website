@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panda Burgués Cal | Hamburguesas</title>
+<meta name="description" content="Hamburguesas hechas al momento. Mira el menú y pide por WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🐼</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF8F3; --ink:#1C1C1A; --bamboo:#5E8B2F; --mustard:#F4B400; --ketchup:#D63D2A; --muted:#5d5d57;
+  --display:"Bowlby One","Arial Black",Impact,sans-serif;
+  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{--paper:#161614; --ink:#F4F1EA; --muted:#b5b3aa}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mustard);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+header{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+header .logo{font-family:var(--display);font-size:1.15rem;text-decoration:none}
+header nav a{margin-left:1.25rem;text-decoration:none;font-weight:500}
+header nav a:hover{text-decoration:underline}
+
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:3rem 0 4rem}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,7.5vw,5.6rem);line-height:.98;margin:0 0 1.25rem;letter-spacing:-.01em}
+.hero h1 span{display:block}
+.hero p{max-width:30rem;color:var(--muted);margin:0 0 1.75rem}
+.btn{display:inline-block;background:var(--ketchup);color:#fff;font-weight:700;padding:.9rem 1.6rem;border-radius:999px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);margin-left:.5rem}
+.burger{width:100%;max-width:26rem;justify-self:center;animation:drop .8s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes drop{from{transform:translateY(-40px);opacity:0}to{transform:none;opacity:1}}
+
+section{padding:3.5rem 0}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,4.5vw,3rem);margin:0 0 .5rem;line-height:1.05}
+.sub{color:var(--muted);margin:0 0 2rem;max-width:36rem}
+
+.menu{background:var(--ink);color:var(--paper)}
+.menu .sub{color:inherit;opacity:.75}
+.items{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 3rem}
+.items li{display:grid;grid-template-columns:1fr auto;gap:.15rem 1rem;padding:1.1rem 0;border-bottom:1px dashed rgba(127,127,120,.5)}
+.items b{font-size:1.125rem}
+.items .price{font-weight:700;color:var(--mustard)}
+.items small{grid-column:1/-1;opacity:.75}
+
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.info h3{font-family:var(--display);font-weight:400;font-size:1.25rem;margin:0 0 .5rem}
+.info p{margin:0;color:var(--muted)}
+
+footer{border-top:2px solid var(--ink);padding:1.5rem 0 2.5rem;font-size:.95rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;padding-top:1.5rem}
+  .burger{order:-1;max-width:15rem}
+  .items{grid-template-columns:1fr}
+  .info{grid-template-columns:1fr;gap:1.5rem}
+  header nav a:first-child{display:none}
+  .btn.alt{margin:.75rem 0 0}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <a class="logo" href="#">Panda Burgués Cal</a>
+    <nav><a href="#menu">Menú</a><a href="#visitanos">Dónde estamos</a></nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1><span>Burgers</span><span>con carácter</span><span>de panda.</span></h1>
+      <p>Carne jugosa, pan suave y salsas de la casa. Cada hamburguesa se prepara al momento.</p>
+      <a class="btn" href="https://wa.me/573000000000?text=Hola%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      <a class="btn alt" href="#menu">Ver el menú</a>
+    </div>
+
+    <svg class="burger" viewBox="0 0 300 300" role="img" aria-label="Hamburguesa con orejas de panda">
+      <circle cx="82" cy="62" r="34" fill="#1C1C1A"/>
+      <circle cx="218" cy="62" r="34" fill="#1C1C1A"/>
+      <path d="M40 150a110 90 0 0 1 220 0z" fill="#E9A64A"/>
+      <g fill="#FAF8F3"><ellipse cx="105" cy="108" rx="9" ry="5" transform="rotate(-20 105 108)"/><ellipse cx="150" cy="92" rx="9" ry="5"/><ellipse cx="195" cy="108" rx="9" ry="5" transform="rotate(20 195 108)"/></g>
+      <path d="M36 158h228c0 14-12 22-26 22H62c-14 0-26-8-26-22z" fill="#5E8B2F"/>
+      <path d="M44 176h212l-14 16-16-12-16 12-16-12-16 12-16-12-16 12-16-12-16 12z" fill="#F4B400"/>
+      <rect x="40" y="186" width="220" height="30" rx="15" fill="#4a2c1a"/>
+      <path d="M40 222h220c0 28-26 46-110 46S40 250 40 222z" fill="#E9A64A"/>
+      <circle cx="120" cy="140" r="7" fill="#1C1C1A"/><circle cx="180" cy="140" r="7" fill="#1C1C1A"/>
+    </svg>
+  </div>
+</div>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <h2>El menú</h2>
+    <p class="sub">Todas las hamburguesas incluyen papas. Cambia los nombres y precios por los tuyos.</p>
+    <ul class="items">
+      <li><b>Panda Clásica</b><span class="price">$00.000</span><small>Carne de res, queso, lechuga, tomate y salsa de la casa.</small></li>
+      <li><b>Doble Bambú</b><span class="price">$00.000</span><small>Doble carne, doble queso, cebolla caramelizada.</small></li>
+      <li><b>Cal Especial</b><span class="price">$00.000</span><small>Carne, tocineta, queso, huevo y salsa BBQ.</small></li>
+      <li><b>Pollo Crujiente</b><span class="price">$00.000</span><small>Pechuga apanada, repollo y salsa de mostaza y miel.</small></li>
+      <li><b>Papas con queso</b><span class="price">$00.000</span><small>Porción para compartir.</small></li>
+      <li><b>Bebidas</b><span class="price">$00.000</span><small>Gaseosas, jugos naturales y limonada.</small></li>
+    </ul>
+  </div>
+</section>
+
+<section id="visitanos">
+  <div class="wrap">
+    <h2>Dónde y cuándo</h2>
+    <p class="sub">Ven al local o pide a domicilio.</p>
+    <div class="info">
+      <div><h3>Dirección</h3><p>Tu dirección aquíLa dirección de tu restaurante Panda Burgués es:
+
+Dirección registrada
+
+3850 E North St\
+Greenville, SC 29615\
+Estados Unidos 🇺🇸<br>Tu ciudad</p></div>
+      <div><h3>Horario</h3><p>Lunes a domingo<br>2:00 p. m. a 11:00 p. m.</p></div>
+      <div><h3>Pedidos</h3><p>WhatsApp: +18643615091<br>Domicilios disponibles</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Panda Burgués Cal</span>
+    <span>www.pandaburguescal.com</span>
+  </div>
+</footer>
+
+</body>
+</html>
